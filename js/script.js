@@ -19,7 +19,7 @@ testWebP(function (support) {
 // ==========================================================================
 function changeHeaderLogo () {
 	var headerLogo = $('.header__logo img');
-	if($('.icon-menu').hasClass('_active') || $("#header").hasClass('fixed')){
+	if($('.icon-menu').hasClass('_active')){
 		setTimeout(function(){
 			headerLogo.attr("src","img/footer/logo-white.png")
 		}, 340);
@@ -138,7 +138,6 @@ $(document).ready(function() {
 	$(window).on("scroll", function(){
 		scrollOffset = $(this).scrollTop();
 		checkScroll(scrollOffset);
-		changeHeaderLogoFast();
 	});
 
 	$(window).resize(function(){
@@ -237,17 +236,16 @@ function changeTab (item) {
 		}
 }
 
-
 tabsBtn.forEach(function(item) {
 	onTabClick(item);
 });
 
 function onTabClick (item) {
-	item.addEventListener("mouseenter", function(event) {
+	item.parentElement.addEventListener("mouseenter", function(event) {
 		event.preventDefault();
 		changeTab(item);
 	});
-	item.addEventListener("click", function(event) {
+	item.parentElement.addEventListener("click", function(event) {
 		event.preventDefault();
 		changeTab(item);
 	});
