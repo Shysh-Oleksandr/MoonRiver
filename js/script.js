@@ -21,12 +21,12 @@ function changeHeaderLogo () {
 	var headerLogo = $('.header__logo img');
 	if($('.icon-menu').hasClass('_active') || $("#header").hasClass('fixed')){
 		setTimeout(function(){
-			headerLogo.attr("src","../img/footer/logo-white.png")
+			headerLogo.attr("src","img/footer/logo-white.png")
 		}, 340);
 	}
 	else {
 		setTimeout(function(){
-			headerLogo.attr("src","../img/intro/logo-black.png");
+			headerLogo.attr("src","img/intro/logo-black.png");
 		}, 140);
 	}
 }
@@ -34,10 +34,10 @@ function changeHeaderLogo () {
 function changeHeaderLogoFast () {
 	var headerLogo = $('.header__logo img');
 	if($("#header").hasClass('fixed')){
-		headerLogo.attr("src","../img/footer/logo-white.png");
+		headerLogo.attr("src","img/footer/logo-white.png");
 	}
 	else {
-		headerLogo.attr("src","../img/intro/logo-black.png");
+		headerLogo.attr("src","img/intro/logo-black.png");
 	}
 }
 
